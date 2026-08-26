@@ -6,6 +6,6 @@ import java.util.List;
 public interface CarService {
     List<Car> getCars();
     Car getCarByPlate(String plate);
+    Car rentCar(String plate);
+    Car getBackCar(String plate);
 }
-
-
