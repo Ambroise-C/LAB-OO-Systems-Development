@@ -15,8 +15,8 @@ public class CarServiceImpl implements CarService {
     private final List<Car> cars = new ArrayList<>();
 
     public CarServiceImpl() {
-        cars.add(new Car("Multipla", "FF15XDD"));
-        cars.add(new Car("Twingo", "PL4QUE"));
+        cars.add(new Car("Renault", "FF15XDD", 15000));
+        cars.add(new Car("Citroen", "PL4QUE", 46000));
     }
 
     @Override
@@ -38,7 +38,7 @@ public class CarServiceImpl implements CarService {
         if (car.isRented()) {
             throw new CarAlreadyRentedException("Car with plate " + plate + " is already rented");
         }
-        car.setRented(true);
+        car.rent(true);
         return car;
     }
 
@@ -48,7 +48,7 @@ public class CarServiceImpl implements CarService {
         if (!car.isRented()) {
             throw new CarNotRentedException("Car with plate " + plate + " is not currently rented");
         }
-        car.setRented(false);
+        car.rent(false);
         return car;
     }
 }

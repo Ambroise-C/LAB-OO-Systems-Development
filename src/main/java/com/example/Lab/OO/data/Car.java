@@ -1,22 +1,40 @@
 package com.example.Lab.OO.data;
 
 public class Car {
-    private String name;
-    private String plate;
-    private Boolean Rented;
 
-    public Car(String name, String plate) {
-        this.name = name;
+    private String plate;
+    private String brand;
+    private int price;
+    private Boolean rented;
+    private Date rentedDate;
+
+    public Car(String brand, String plate, int price) {
+        this.brand = brand;
         this.plate = plate;
-        this.Rented = false;
+        this.price = price;
+        this.rented = false;
+        this.rentedDate = new Date(1,1,2000);
     }
 
     public Car(){}
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    public String getBrand() { return brand; }
+    public void setBrand(String name) { this.brand = brand; }
     public String getPlate() { return plate; }
     public void setPlate(String plate) { this.plate = plate; }
-    public Boolean isRented() { return Rented; }
-    public void setRented(Boolean rented) { this.Rented = rented; }
+    public Boolean isRented() { return rented; }
+    public void setRented(Boolean rented) { this.rented = rented; }
+    public Date getRentedDate() { return rentedDate; }
+    public void setRentedDate(Date rentedDate) { this.rentedDate = rentedDate; }
+    public int getPrice() { return price; }
+    public void setPrice(int price) { this.price = price; }
+    public void rent(boolean Rented){
+        if(Rented){
+            this.rentedDate = new Date();
+        }
+        this.rented = Rented;
+        this.rentedDate = new Date(1,1,2000);
+
+
+    }
 }
