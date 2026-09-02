@@ -1,6 +1,6 @@
 package com.example.Lab.OO.web;
 
-import com.example.Lab.OO.data.Car;
+import com.example.Lab.OO.entity.Car;
 import com.example.Lab.OO.service.CarService;
 import org.springframework.web.bind.annotation.*;
 

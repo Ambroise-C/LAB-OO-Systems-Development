@@ -1,6 +1,6 @@
 package com.example.Lab.OO.service;
 
-import com.example.Lab.OO.data.Car;
+import com.example.Lab.OO.entity.Car;
 import java.util.List;
 
 public interface CarService {
@@ -8,4 +8,5 @@ public interface CarService {
     Car getCarByPlate(String plate);
     Car rentCar(String plate);
     Car getBackCar(String plate);
+    void addCar(Car car);
 }
